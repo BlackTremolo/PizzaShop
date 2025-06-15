@@ -9,7 +9,7 @@ function some()
 		alert(x);
 	}
 
-function add_to_cart(id)
-{
-	alert('You added puzza with id:' + id);	
-}
+// function add_to_cart(id)
+// {
+// 	alert('You added pizza with id:' + id);	
+// }
