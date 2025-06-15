@@ -8,3 +8,8 @@ function some()
 		
 		alert(x);
 	}
+
+function add_to_cart(id)
+{
+	alert('You added puzza with id:' + id);	
+}
