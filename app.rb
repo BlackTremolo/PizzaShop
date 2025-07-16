@@ -17,3 +17,11 @@ end
 get '/about' do 
 	erb :about
 end
+
+post '/cart' do
+	erb "hellow"	
+end
+
+get '/blabla' do 
+	erb :index
+end
