@@ -9,13 +9,17 @@ function some()
 		alert(x);
 	}
 
+
 function add_to_cart(id)
 {
 	var key = 'product_' + id;
 	var x = window.localStorage.getItem(key);
 	x = x * 1 + 1;
 	window.localStorage.setItem(key, x);	
+
+	update_orders_input()
 }
+
 
 function cart_get_number_of_items() 
 {
@@ -34,6 +38,7 @@ function cart_get_number_of_items()
 	return cnt;
 }
 
+
 function cart_get_orders() 
 {
 	var orders = '';
@@ -45,8 +50,16 @@ function cart_get_orders()
 
 		if(key.indexOf('product_') == 0)
 		{
-			orders = orders + key + '=' + value + ',';
+			orders = orders + key + "=" + value + ",";
 		}
 	} 
-	return cnt;
+	return orders;
+}
+
+
+function update_orders_input()
+{
+	var orders = cart_get_orders();
+	$('#orders_input').val(orders);
+
 }
