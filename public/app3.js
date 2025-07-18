@@ -1,15 +1,15 @@
-function cart_get_nymber_of_items() 
+function cart_get_number_of_items() 
 {
 	var cnt = 0;
 
 	for(var i = 0; i < window.localStorage.length;  i++)
 	{
-		var key = window.localStorage.key(i);
-		var value = window.localStorage.getItem(key);
+		var key1 = window.localStorage.key(i);
+		var value1 = window.localStorage.getItem(key1);
 
-		if(key.indexOf('product_') == 0)
+		if(key1.indexOf('product_') == 0)
 		{
-			cnt = cnt + value * 1;
+			cnt = cnt + value1 * 1;
 		}
 	} 
 	return cnt;

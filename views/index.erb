@@ -1,3 +1,11 @@
+	<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
 <h2>Welcomre to Pizza Shop!</h2>
 <div class="row">
 <% @products.each do |product|%>
@@ -31,9 +39,12 @@
 <br>
 <br>
 <button class="btn btn-primary" onclick="some()">Click me!</button>
-
 <script type="text/javascript">
 $(function(){
 	update_orders_input();
+	update_orders_button();
 });
 </script>
+
+</body>
+</html>

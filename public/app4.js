@@ -4,12 +4,12 @@ function cart_get_orders()
 
 	for(var i = 0; i < window.localStorage.length;  i++)
 	{
-		var key = window.localStorage.key(i);
-		var value = window.localStorage.getItem(key);
+		var key2 = window.localStorage.key(i);
+		var value2 = window.localStorage.getItem(key2);
 
-		if(key.indexOf('product_') == 0)
+		if(key2.indexOf('product_') == 0)
 		{
-			orders = orders + key + "=" + value + ",";
+			orders = orders + key2 + "=" + value2 + ",";
 		}
 	} 
 	return orders;
