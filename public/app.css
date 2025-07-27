@@ -1,4 +1,8 @@
 #orders_button
 {
-	background-color: red;
+	background-color: #F8F8F8;
+	border: none;
+	font-size: 20px;
+	padding: 10px 20px 10px 20px;
+	text-decoration: underline;
 }
