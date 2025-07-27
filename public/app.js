@@ -1,6 +1,7 @@
 function cancel_order()
 {
-	alert('Order is delete');
+	window.localStorage.clear();
+	update_orders_button()
 	return false;
 }
 
