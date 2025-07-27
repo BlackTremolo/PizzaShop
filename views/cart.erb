@@ -37,6 +37,9 @@
 
 
 <form action ="/place_order" method="POST">
+	
+	<input type="hidden" name="order[orders_input]" value=" <%= @orders_input %>" >
+
 	<div class="form-group">
 	    <label>Name</label>
 	    <input  name ="order[name]" type="text" class="form-control"  placeholder="Your name" value=<%= @user_name%>>

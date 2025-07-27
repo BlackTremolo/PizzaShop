@@ -6,7 +6,9 @@ require 'sinatra/activerecord'
 set :database, {adapter: "sqlite3", database: "pizzashop.db"}
 
 class Product < ActiveRecord::Base
+end
 
+class Order < ActiveRecord::Base
 end
 
 get '/' do
@@ -19,8 +21,8 @@ get '/about' do
 end
 
 post '/cart' do
-	orders_input = params[:orders]
-	@items = parse_orders_line(orders_input)
+	@orders_input = params[:orders]
+	@items = parse_orders_line(@orders_input)
 	
 	@items.each do |item|
 		item[0] = Product.find(item[0])
@@ -30,7 +32,7 @@ post '/cart' do
 end
 
 def parse_orders_line orders_input
-	s1 = orders_input.split(/\,/)
+	s1 = @orders_input.split(/\,/)
 	arr = []
 		
 	s1.each do |x|
