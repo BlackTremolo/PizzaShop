@@ -1,3 +1,9 @@
+function cancel_order()
+{
+	alert('Order is delete');
+	return false;
+}
+
 function some()
 	{
 		var x = window.localStorage.getItem('aaa');
@@ -71,3 +77,5 @@ function update_orders_button()
 	var text = 'Cart (' + cart_get_number_of_items() + ')';
 	$('#orders_button').val(text);
 }
+
+
