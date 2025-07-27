@@ -31,6 +31,12 @@ post '/cart' do
 	erb :cart 	
 end
 
+post '/place_order' do 
+	@order = Order.create params[:order]
+	erb :place_order
+end
+
+
 def parse_orders_line orders_input
 	s1 = @orders_input.split(/\,/)
 	arr = []
