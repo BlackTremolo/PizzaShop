@@ -1,7 +1,8 @@
 function cancel_order()
 {
 	window.localStorage.clear();
-	update_orders_button()
+	update_orders_button();
+	$('#cart').text('Your cart is empty');
 	return false;
 }
 
